@@ -1,0 +1,17 @@
+{
+  "name": "affiliate-tracker",
+  "description": "Professional Affiliate Tracking System",
+  "type": "project",
+  "require": {
+    "php": ">=7.4",
+    "google/apiclient": "^2.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "AffiliateTracker\\": "src/"
+    }
+  },
+  "config": {
+    "optimize-autoloader": true
+  }
+}

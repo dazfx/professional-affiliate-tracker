@@ -1,0 +1,6 @@
+# Composer Dependencies Directory
+# Install dependencies with: composer install
+*
+!.gitkeep
+!composer.json
+!composer.lock
