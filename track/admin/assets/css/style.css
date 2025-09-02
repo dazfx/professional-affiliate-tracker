@@ -1,0 +1,229 @@
+/*!
+ * Professional Affiliate Tracking System - Main Stylesheet
+ * Version: 2.0.0
+ * Author: TeamLead Optimized
+ * Last Updated: 2025-09-01
+ */
+
+:root {
+    /* === Brand Colors === */
+    --primary-color: #0066cc;
+    --primary-hover: #0052a3;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #f39c12;
+    --info-color: #17a2b8;
+    --secondary-color: #6c757d;
+    
+    /* === Light Theme Variables === */
+    --bg-main: #f8f9fa;
+    --bg-card: #ffffff;
+    --bg-sidebar: #2c3e50;
+    --bg-navbar: #ffffff;
+    --bg-table: #ffffff;
+    --bg-table-stripe: #f8f9fa;
+    --bg-table-hover: #e3f2fd;
+    --text-primary: #2c3e50;
+    --text-secondary: #5a6c7d;
+    --text-muted: #7b8a9a;
+    --text-contrast: #ffffff;
+    --text-link: #0066cc;
+    --text-link-hover: #0052a3;
+    --border-color: #e1e8ed;
+    --shadow: 0 0.125rem 0.25rem rgba(44, 62, 80, 0.1);
+    --input-bg: #ffffff;
+    --input-border: #d1d9e0;
+    --input-focus-border: #0066cc;
+    --dropdown-bg: #ffffff;
+    --dropdown-border: #e1e8ed;
+    --transition-base: 0.3s ease;
+}
+
+/* Dark theme */
+.dark-mode {
+    --bg-main: #0d1117;
+    --bg-card: #161b22;
+    --bg-sidebar: #0d1117;
+    --bg-navbar: #161b22;
+    --bg-table: #161b22;
+    --bg-table-stripe: #21262d;
+    --bg-table-hover: #1c2128;
+    --text-primary: #f0f6fc;
+    --text-secondary: #7d8590;
+    --text-muted: #656d76;
+    --text-contrast: #0d1117;
+    --text-link: #58a6ff;
+    --text-link-hover: #79c0ff;
+    --border-color: #30363d;
+    --shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+    --input-bg: #0d1117;
+    --input-border: #30363d;
+    --input-focus-border: #58a6ff;
+    --dropdown-bg: #161b22;
+    --dropdown-border: #30363d;
+}
+
+/* Base styles */
+body {
+    background-color: var(--bg-main) !important;
+    color: var(--text-primary) !important;
+    transition: all var(--transition-base);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* Theme toggle */
+#theme-toggle {
+    transition: all var(--transition-base);
+    padding: 0.75rem;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Cards */
+.card {
+    background-color: var(--bg-card) !important;
+    border: 1px solid var(--border-color) !important;
+    box-shadow: var(--shadow);
+    transition: all var(--transition-base);
+    color: var(--text-primary) !important;
+}
+
+/* Tables */
+.table {
+    color: var(--text-primary) !important;
+    border-color: var(--border-color) !important;
+    background-color: var(--bg-table) !important;
+}
+
+.table th,
+.table td {
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+    background-color: var(--bg-table) !important;
+}
+
+/* Forms */
+.form-control {
+    background-color: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: var(--text-primary) !important;
+    transition: all var(--transition-base);
+}
+
+.form-control:focus {
+    border-color: var(--input-focus-border) !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+    background-color: var(--input-bg) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Modals */
+.modal-content {
+    background-color: var(--bg-card) !important;
+    color: var(--text-primary) !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    background-color: var(--dropdown-bg) !important;
+    border: 1px solid var(--dropdown-border) !important;
+    z-index: 1050 !important;
+}
+
+.dropdown-item {
+    color: var(--text-primary) !important;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bg-table-hover) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Buttons */
+.btn {
+    transition: all var(--transition-base);
+    border-radius: 0.375rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    color: var(--text-contrast) !important;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-hover) !important;
+    border-color: var(--primary-hover) !important;
+    color: var(--text-contrast) !important;
+}
+
+/* Tags input */
+.tags-input-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    width: 100%;
+    align-items: center;
+}
+
+.tags-typing-input {
+    background: transparent;
+    border: none;
+    padding: 0;
+    outline: none;
+    flex-grow: 1;
+    min-width: 150px;
+    color: var(--text-primary);
+}
+
+.tag {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9em;
+    transition: all var(--transition-base);
+}
+
+.tag:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.05);
+}
+
+.tag-remove {
+    cursor: pointer;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+/* DataTables */
+.dataTables_wrapper {
+    color: var(--text-primary) !important;
+}
+
+.dataTables_wrapper .table {
+    color: var(--text-primary) !important;
+    background-color: var(--bg-table) !important;
+}
+
+/* Responsive utilities */
+@media (max-width: 768px) {
+    .table-responsive {
+        font-size: 0.875rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    .btn, .dropdown, .modal {
+        display: none !important;
+    }
+}
