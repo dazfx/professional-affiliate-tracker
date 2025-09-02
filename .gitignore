@@ -1,0 +1,32 @@
+# PHP
+*.log
+*.tmp
+/vendor/
+/node_modules/
+
+# Database
+*.sql.backup
+*.sql.bak
+
+# Configuration files with sensitive data
+/track/admin/db.php
+/track/s.json
+/track/data/service-account*.json
+
+# Logs and cache
+/track/logs/*
+!/track/logs/.gitkeep
+/track/queue/*
+!/track/queue/.gitkeep
+
+# IDE and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Temporary files
+/tmp/
+temp/
